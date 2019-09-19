@@ -1,0 +1,69 @@
+doctype html
+
+html
+
+  head
+    // Site Title
+    title Работа в Яндекс Такси | Приглашаем на работу
+
+    // Meta
+    meta(name="format-detection" content="telephone=no")
+    meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(charset="utf-8")
+
+    meta(itemprop="name" content="Работа в Такси")
+    meta(itemprop="description" content="Официальный партнёр Яндекс.Такси. Приглашаем на работу водителей с личным автомобилем. Свободный график, выезжайте на маршрут когда удобно.")
+    meta(itemprop="image" content="img/favicon/apple-touch-icon.png")
+
+    meta(name="description" content="Работа в такси. Подключайтесь к Яндекс Такси через официального партнера.")
+    meta(property="og:title" content="Работа в Такси, Украина, Казахстан, Узбекистан, Киргизия, Израиль, Литва, Румыния")
+    meta(property="og:image" content="img/favicon/apple-touch-icon.png")
+    meta(property="og:description" content="Работа в такси. Подключайтесь к Яндекс Такси через официального партнера.")
+
+    // Favicon
+    link(rel="apple-touch-icon", sizes="180x180", href="img/favicon/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="img/favicon/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
+    link(rel="manifest", href="img/favicon/site.webmanifest")
+    link(rel="mask-icon", href="img/favicon/safari-pinned-tab.svg", color="#5bbad5")
+    link(rel="shortcut icon", href="img/favicon/favicon.ico")
+    meta(name="msapplication-TileColor", content="#da532c")
+    meta(name="msapplication-config", content="img/favicon/browserconfig.xml")
+    meta(name="theme-color", content="#ffffff")
+
+    // Stylesheets
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous")
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css")
+    link(rel="stylesheet" type="text/css" href="css/style.min.css")
+
+    // Javascript
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js")
+    script(src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js')
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js")
+    script(src="js/main.min.js")
+
+  body
+    include ../elements/_loader
+    include ../elements/_mobile-menu
+    include ../elements/_socials
+
+    .background
+    .background__container
+    include ../parts/_header
+    include ../parts/_hero
+    
+    main
+      include ../parts/_benefits
+      include ../parts/_about
+      include ../parts/_advantages
+      include ../parts/_conditions
+      include ../parts/_registration
+      include ../parts/_faq
+
+    include ../parts/_footer  
+
+    include ../elements/_sprites

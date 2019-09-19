@@ -1,0 +1,27 @@
+@import 'common/mixins';
+@import 'common/variables';
+@import 'common/main';
+@import 'common/reset';
+
+@import 'elements/loader';
+@import 'elements/logo';
+@import 'elements/nav';
+@import 'elements/btn';
+@import 'elements/headline';
+@import 'elements/form';
+@import 'elements/contacts';
+@import 'elements/mobile-menu';
+@import 'elements/sandwich';
+@import 'elements/socials';
+
+@import 'parts/background';
+@import 'parts/header';
+@import 'parts/hero';
+@import 'parts/places';
+@import 'parts/benefits';
+@import 'parts/about';
+@import 'parts/advantages';
+@import 'parts/conditions';
+@import 'parts/registration';
+@import 'parts/faq';
+@import 'parts/footer';

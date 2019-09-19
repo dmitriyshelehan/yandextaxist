@@ -1,0 +1,105 @@
+// Form
+
+.form {
+    background: $color-white;
+
+    &__wrapper {
+        padding: 1.5rem 0;
+    }
+
+    &__title {
+        width: 100%;
+        padding: 3rem 0;
+        text-align: center;
+        text-transform: uppercase;
+        background: $color-yellow;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        font-weight: 500;
+
+        span {
+            color: $color-red;
+        }
+
+        @include mq('phone-wide', max) {
+            padding: 2rem;
+        }
+    }
+
+    &__row {
+        padding: .5rem 2rem;
+
+        @include mq('phone-wide', max) {
+            padding: .5rem 1rem;
+        }
+
+        &--padding {
+            padding: 1rem 2rem 1.5rem;
+
+            @include mq('phone-wide', max) {
+                padding: 1rem 1rem 2rem;
+            }
+        }
+
+        label {
+            position: relative;
+            display: block;
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;    
+            font-size: 1rem;
+            font-weight: 500;
+
+            &.no-padding {
+                padding-left: 0;
+            }
+        }
+
+        input {
+            width: 100%;
+            padding: .5rem;
+            border: 1px solid $color-gray--dark;
+
+            &::placeholder {
+                color: rgba($color-gray--dark, .4);
+            }
+
+            &.btn {
+                border: 1px solid $color-red;
+                width: 50%;
+            }
+
+            &:focus {
+                border: 1px solid $color-red;
+            }
+        }
+
+        select {
+            appearance: none;
+            padding: .5rem;
+            border: 1px solid $color-gray--dark;
+            border-radius: 0;
+            width: 50%;
+            font-weight: 500;
+            background: none;
+        }
+    }
+
+    &__star {
+        position: absolute;
+        left: 0;
+        font-size: 1.5rem;
+        color: $color-red;
+    }
+
+    &__check {
+        position: absolute;
+        display: block;
+        bottom: -1.9rem;
+        left: 43%;
+        width: 0;
+	    height: 0;
+	    border-left: 4px solid transparent;
+	    border-right: 4px solid transparent;
+        border-top: 8px solid $color-gray--dark;
+    }
+}

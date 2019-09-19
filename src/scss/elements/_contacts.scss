@@ -1,0 +1,56 @@
+// Contacts
+
+.contact {
+    padding: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include mq('tablet', max) {
+        padding: 2rem 0;
+    }
+
+    &__mail {
+        a {
+            font-size: 1.1rem;
+            color: rgba($color-gray, .5);
+            font-weight: 300;
+            cursor: pointer;
+        }
+
+        i {
+            color: $color-gray;
+            margin-right: 0.5rem;
+        }
+
+        @include mq('tablet', max) {
+            width: 100%;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+    }
+
+    &__number {
+        display: flex;
+        span {
+            color: rgba($color-gray, .5);
+            font-weight: 300;
+
+            @include mq('tablet', max) {
+                width: 80%;
+                margin-bottom: 0.5rem;
+                text-align: left;
+            }
+        }
+
+        i {
+            color: $color-gray;
+            margin: 0 .5rem 0 1rem;
+
+            @include mq('tablet', max) {
+                margin-left: 2rem;
+            }
+        }
+    }
+}

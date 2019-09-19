@@ -1,0 +1,83 @@
+// Conditions
+
+.conditions {
+    background: $color-white;
+
+    &__headline {
+        margin-bottom: 3rem;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__item {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    &__picture {
+        margin-bottom: 1.5rem;
+    }
+
+    &__icon {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    &__text {
+        padding: 0 3rem;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.3rem;
+
+        @include mq('tablet-wide', max) {
+            padding: 0 1rem 1rem;
+        }
+    }
+
+    &__line {
+        position: absolute;
+        top: 24%;
+        display: block;
+        width: 150px;
+        border-bottom: 2px dashed $color-green;
+
+        @include mq('desktop', max) {
+            display: none;
+        }
+
+        @include mq('desktop', max) {
+            width: 100px;
+        } 
+
+        &--left {
+            left: 26%;
+
+            @include mq('desktop', max) {
+                left: 29%;
+            } 
+        }
+
+        &--right {
+            right: 28%;
+
+            @include mq('tablet-wide', max) {
+                right: 30%;
+            } 
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: -16%;
+            display: block;
+            width: 0;
+	        height: 0;
+	        border-top: 6px solid transparent;
+	        border-left: 20px solid $color-green;
+	        border-bottom: 6px solid transparent;
+        }
+    }
+}

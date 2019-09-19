@@ -1,0 +1,53 @@
+// Sandwich button
+.sandwich {
+    position: fixed;
+    top: 1.5rem;
+    right: 1rem;
+    display: block;
+    margin: 0;
+    padding: 0;
+    transition: all .5s ease-in-out;
+    z-index: 100;
+
+    @include mq('tablet', min) {
+        display: none;
+    }
+
+    @include mq('phablet', min) {
+        top: 2rem;
+        right: 1.5rem;
+    }
+
+    // List
+    &__list {
+        cursor: pointer;
+        z-index: 100;
+    }
+    
+    //  LINES
+    &__line {
+        display: block;
+        margin: 5px;
+        width: 28px;
+        height: 3px;
+        background: $color-white;
+        border-radius: 10px;
+        transition: all .3s ease-in-out;
+    } 
+    
+    // Rotate into X with lines
+    &.js-close {
+        .sandwich__line {
+            // Line 1
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(6px, 5px);
+            } // Line 2
+            &:nth-child(2) {
+                opacity: 0;
+            } // Line 3
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -5px);
+            }
+        }
+    }
+}

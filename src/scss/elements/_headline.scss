@@ -1,0 +1,28 @@
+// Headline
+
+.headline {
+    width: 100%;
+    padding: 3rem 2rem;
+    text-align: center;
+    font-weight: 500;
+    background: $color-yellow;
+
+    @include mq('phone-wide', max) {
+        padding: 2rem;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+
+        span {
+            color: $color-red;
+        }
+
+        @include mq('tablet', max) {
+            font-size: 1rem;
+            line-height: 1.8rem;
+            padding: 0 2rem;
+        }
+    }
+}

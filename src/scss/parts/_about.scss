@@ -1,0 +1,44 @@
+// About
+
+.about {
+    position: relative;
+    padding: 10rem 0;
+    // background-image: url('../img/about-bg-min.jpg');
+    // background-size: cover;
+    background: transparent;
+
+    @include mq('tablet-wide', max) {
+        padding: 3rem 1rem;
+    }
+
+    &__headline {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+
+        @include mq('phone-wide', max) {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        font-size: 3rem;
+        color: $color-white;
+
+        span {
+            @include redletter;
+        }
+
+        @include mq('phone-wide', max) {
+            font-size: 2rem;
+        }
+    }
+
+    &__subtitle {   
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.8rem;
+        color: darken($color-gray, 20%);
+    }
+}

@@ -1,0 +1,99 @@
+// Socials
+
+.socials {
+    position: fixed;
+    bottom: -1.5rem;
+    right: 10rem;
+    height: 10vh;
+    z-index: 50;
+
+    @include mq('tablet-wide', max) {
+        right: 7.5rem;
+        bottom: -4rem;
+    }
+
+    @include mq('phone-wide', max) {
+        right: 4.5rem;
+        bottom: -3rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    &__item {
+        position: absolute;
+        transform: translateY(0%);
+        transition: all .5s ease-in-out;
+        opacity: 0;
+
+        &--phone {
+            transform: translateY(0%);
+            transform: rotate(0deg);
+            opacity: 1;
+            z-index: 10;
+        }
+
+        &--circle {
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background: rgba(green, .8);
+            z-index: 9;
+            opacity: 1;
+            transform: scale(.9);
+            animation: vawe 1.5s infinite ease-out;
+
+            @include mq('phone-wide', max) {
+                margin-left: -.5rem;
+                margin-top: .5rem;
+            }
+        }
+    }
+
+    &__icon {
+        width: 4rem;
+        height: 4rem;
+
+        @include mq('phone-wide', max) {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+}
+
+@keyframes vawe {
+    from {
+        transform: scale(.8);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+.socials__item--circle.js-active {
+    display: none;
+}
+.socials__item--viber.js-active,
+.socials__item--telegram.js-active,
+.socials__item--whatsapp.js-active {
+    opacity: 1;
+}
+
+.socials__item--viber.js-active {
+    transform: translateY(-110%);
+}
+.socials__item--telegram.js-active {
+    transform: translateY(-220%);
+}
+.socials__item--whatsapp.js-active {
+    transform: translateY(-330%);
+}
+
+.socials__item--phone.js-active {
+    transform: rotate(360deg);
+}

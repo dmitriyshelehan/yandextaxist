@@ -1,0 +1,23 @@
+// Btn
+
+.btn {
+    display: inline-block;
+    padding: .5rem 2rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: $color-red;
+    text-transform: uppercase;
+    color: $color-white;
+    line-height: 1.7rem;
+    transition: all .4s;
+
+    &:hover {
+        color: $color-white;
+        background: lighten($color-red, 20%);
+    }
+
+    @include mq('phone-wide', max) {
+        font-size: 0.9rem;
+        border-radius: 10px;
+    }
+}

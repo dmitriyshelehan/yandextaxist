@@ -1,0 +1,69 @@
+// Registration
+
+.registration {
+    background: transparent;
+
+    &__wrapper {
+        padding: 2rem 0;
+    }
+    
+    &__content {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        position: relative;
+        padding: 3rem 2rem 0 0;
+
+        @include mq('tablet-wide', max) {
+            padding: 2rem 1rem 1rem;
+        }
+
+        @include mq('phone-wide', max) {
+            padding: 1rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    &__picture {
+        margin-right: 1rem;
+    }
+
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &__text {
+        font-size: 1.1em;
+        line-height: 1.5rem;
+        font-weight: 300;
+        color: $color-white;
+
+        span {
+            color: $color-yellow;
+
+            &.red {
+                @include redletter;
+            }
+        }
+
+        @include mq('phone-wide', max) {
+            font-size: 0.9rem;
+        }
+    }
+
+    &__form {
+        @include mq('tablet-wide', max) {
+            padding: 2rem 1rem;
+        }
+
+        @include mq('phone-wide', max) {
+            padding: 0 0 1rem;
+        }
+    }
+}

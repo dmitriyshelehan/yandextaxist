@@ -1,0 +1,114 @@
+//- Registration
+
+section.registration
+    .headline.registration__headline
+        h3.headline__title У 
+            span Вас  
+            | уже есть всё, что бы начать 
+            span Сегодня      
+    .container
+        .row.registration__wrapper
+            .registration__content.col-sm-12.col-md-12.col-lg-6
+                ul.registration__list
+                    li.registration__item
+                        .registration__picture
+                            svg.registration__icon
+                                use(xlink:href='#shield')
+                        .registration__text Станьте водителем 
+                            span.red Я
+                            | ндекс 
+                            | такси в 
+                            span Украине,   
+                            span Казахстане,  
+                            span Киргизии, 
+                            span Узбекистане,  
+                            span Литве,  
+                            span Израиле,   
+                            span Румынии  
+                            | Прямо Сейчас
+                    li.registration__item
+                        .registration__picture
+                            svg.registration__icon
+                                use(xlink:href='#shield')
+                        .registration__text Зарабатывайте 
+                            | в свободное время на своем авто
+                    li.registration__item
+                        .registration__picture
+                            svg.registration__icon
+                                use(xlink:href='#shield')
+                        .registration__text 
+                            span Гарантированная 
+                            | оплата каждого заказа
+                    li.registration__item
+                        .registration__picture
+                            svg.registration__icon
+                                use(xlink:href='#shield')
+                        .registration__text Выгодные 
+                            span Бонусы 
+                            | от компании
+                    li.registration__item
+                        .registration__picture
+                            svg.registration__icon
+                                use(xlink:href='#shield')
+                        .registration__text Процедура регистрации водителя 
+                            span Проста 
+                            | и 
+                            span Удобна 
+                    li.registration__item
+                        .registration__picture
+                            svg.registration__icon
+                                use(xlink:href='#shield')
+                        .registration__text Вам не Вам не придется ехать в офис компании. Достаточно заполнить форму и уже 
+                            span Cегодня 
+                            | вы сможете подключиться
+                    li.registration__item
+                        .registration__picture
+                            svg.registration__icon
+                                use(xlink:href='#shield')
+                        .registration__text Оставьте заявку и мы определим 
+                            span Удобный 
+                            | вариант сотрудничества
+
+            #registration.registration__form.col-sm-12.col-md-12.col-lg-6 
+                form.form(action="https://formspree.io/D.shelehan@gmail.com" method="POST")
+                    fieldset.form__wrapper
+                        legend.form__title Зарегистрируйтесь 
+                            span Сейчас     
+                        p.form__row
+                            label(for="name") 
+                                span.form__star *
+                                | Фамилия, Имя, Отчество  
+                            input#name(type="text", name="name" placeholder="Иванов Иван Иванович")
+                        p.form__row
+                            label(for="phone") 
+                                span.form__star *
+                                | Телефон 
+                            input#phone(type="number", name="phone" placeholder="+XX (XXX) XXX-XX-XX") 
+                        p.form__row
+                            label(for="licence") 
+                                span.form__star *
+                                | Водительское удостоверение  
+                            input#licence(type="text", name="licence" placeholder="ВАУ 000000")
+                        p.form__row
+                            label(for="avto") 
+                                span.form__star *
+                                | Марка, год и цвет авто 
+                            input#avto(type="text", name="avto" placeholder="Опель Астра, 2000, Белый") 
+                        p.form__row
+                            label(for="number") 
+                                span.form__star *
+                                | Гос. Номер 
+                            input#number(type="text", name="number" placeholder="XX XXXX XX")
+                        p.form__row.form__row--padding
+                            label.no-padding(for="city") Выберите Страну  
+                                span.form__check  
+                            select#city(name="country")
+                                option(value="Ukraine") Украина
+                                option(value="Kazahstan") Казахстан
+                                option(value="Kirgiztan") Киргизия
+                                option(value="Uzbekistan") Узбекистан
+                                option(value="Litva") Литва
+                                option(value="Izrail") Израиль
+                                option(value="Romaine") Румыния
+                        p.form__row 
+                            input(type="submit", value="регистрация").btn.form__btn    

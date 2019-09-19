@@ -1,0 +1,101 @@
+// Advantages
+
+.advantages {
+    background-color: $color-gray;
+
+    &__headline {
+        margin-bottom: 4rem;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4rem;
+
+        &--left {
+            justify-content: flex-end;
+        }
+
+        @include mq('tablet-wide', max) {
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    &__picture {
+        padding: 0 2rem;
+
+        @include mq('tablet-wide', max) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__icon {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    &__text {
+        align-self: stretch;
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        
+        span {
+            color: $color-red;
+        }
+
+        @include mq('phone-wide', max) {
+            padding: 0 1rem;
+        }
+    }
+
+    &__desc {
+        font-size: .9rem;
+        font-weight: 500;
+        line-height: 1.3rem;
+
+        @include mq('phone-wide', max) {
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        span {
+            color: $color-red;
+        }
+    }
+
+    &__registration {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 3rem 0;
+        background: $color-white;
+    }
+
+    &__subtitle {
+        text-align: center;
+        padding: 0 3rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+
+        span {
+            @include redletter;
+        }
+
+        @include mq('tablet', max) {
+            padding: 0 1rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

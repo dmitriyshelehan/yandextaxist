@@ -1,0 +1,25 @@
+// Logo
+
+.logo {
+    width: 20%;
+
+    @include mq('tablet', max) {
+        margin-left: 1rem;
+        width: 40%;
+    }
+
+    &--footer {
+        @include mq('phone-wide', max) {
+            display: none;
+        }
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
